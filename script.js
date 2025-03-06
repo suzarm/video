@@ -1,4 +1,4 @@
-const videos = document.querySelectorAll('.responsive-video');
+const videos = document.querySelectorAll('video');
 
 videos.forEach(function(video) {
   video.addEventListener('play', function() {
