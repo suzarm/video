@@ -1,4 +1,15 @@
-const videos = document.querySelectorAll('video');
+const videos = document.querySelectorAll('.responsive-video');
+
+videos.forEach(function(video) {
+  video.addEventListener('play', function() {
+    videos.forEach(function(otherVideo) {
+      if (otherVideo !== video && otherVideo.paused) {
+        otherVideo.play();
+      }
+    });
+  });
+});
+
 
 videos.forEach(function(video) {
   video.addEventListener('click', function() {
